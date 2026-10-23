@@ -108,34 +108,15 @@ export const featuredBestSellers: Product[] = [
   },
 ];
 
+const pick = (index: number): Product => featuredBestSellers[index]!;
+
 export const featuredNewArrivals: Product[] = [
-  featuredBestSellers[5],
-  featuredBestSellers[6],
-  featuredBestSellers[2],
-  featuredBestSellers[0],
-  featuredBestSellers[3],
-  featuredBestSellers[7],
-  featuredBestSellers[1],
-  featuredBestSellers[4],
-];
+  5, 6, 2, 0, 3, 7, 1, 4,
+].map(pick);
 
-export const everyLookGrid: Product[] = [
-  featuredBestSellers[0],
-  featuredBestSellers[1],
-  featuredBestSellers[2],
-  featuredBestSellers[4],
-  featuredBestSellers[6],
-  featuredBestSellers[5],
-  featuredBestSellers[7],
-  featuredBestSellers[3],
-];
+export const everyLookGrid: Product[] = [0, 1, 2, 4, 6, 5, 7, 3].map(pick);
 
-export const trendingProducts: Product[] = [
-  featuredBestSellers[1],
-  featuredBestSellers[0],
-  featuredBestSellers[6],
-  featuredBestSellers[3],
-];
+export const trendingProducts: Product[] = [1, 0, 6, 3].map(pick);
 
 export const trendingEditorialImage = trendingEditorial;
 
