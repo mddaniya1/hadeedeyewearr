@@ -7,6 +7,8 @@ import trendingEditorial from "@/assets/trending-editorial.jpg";
 import heroImage from "@/assets/hero.jpg";
 import { WHATSAPP_NUMBER, whatsappLink } from "@/data/demo-products";
 
+const INSTAGRAM_URL = "https://www.instagram.com/hadeedeyewear";
+
 const GALLERY = [
   { image: heroImage, alt: "Model wearing black designer sunglasses" },
   { image: bannerPrescription, alt: "Woman wearing prescription glasses" },
@@ -138,10 +140,17 @@ export function Footer() {
           </div>
         </div>
 
-        {/* Instagram gallery — no links until the handle is verified */}
+        {/* Instagram gallery */}
         <div className="mt-12">
           <h3 className="text-sm font-semibold uppercase tracking-[0.15em]">
-            Follow us on Instagram
+            <a
+              href={INSTAGRAM_URL}
+              target="_blank"
+              rel="noreferrer"
+              className="transition-colors hover:text-footer-muted"
+            >
+              Follow us on Instagram
+            </a>
           </h3>
           <ul className="mt-4 grid grid-cols-3 gap-2 sm:grid-cols-6">
             {GALLERY.map((item) => (
@@ -149,14 +158,22 @@ export function Footer() {
                 key={item.image + item.alt}
                 className="aspect-square overflow-hidden rounded-md"
               >
-                <img
-                  src={item.image}
-                  alt={item.alt}
-                  width={1024}
-                  height={1024}
-                  loading="lazy"
-                  className="size-full object-cover transition-transform duration-300 hover:scale-105"
-                />
+                <a
+                  href={INSTAGRAM_URL}
+                  target="_blank"
+                  rel="noreferrer"
+                  aria-label={`${item.alt} — view @hadeedeyewear on Instagram`}
+                  className="block size-full"
+                >
+                  <img
+                    src={item.image}
+                    alt={item.alt}
+                    width={1024}
+                    height={1024}
+                    loading="lazy"
+                    className="size-full object-cover transition-transform duration-300 hover:scale-105"
+                  />
+                </a>
               </li>
             ))}
           </ul>
