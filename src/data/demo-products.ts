@@ -120,11 +120,6 @@ export const trendingProducts: Product[] = [1, 0, 6, 3].map(pick);
 
 export const trendingEditorialImage = trendingEditorial;
 
-export const newSeasonGrid: Product[] = [
-  featuredBestSellers[5],
-  featuredBestSellers[2],
-  featuredBestSellers[6],
-  featuredBestSellers[4],
-];
+export const newSeasonGrid: Product[] = [5, 2, 6, 4].map(pick);
 
 export const newSeasonFeatureImage = newseasonFeature;
